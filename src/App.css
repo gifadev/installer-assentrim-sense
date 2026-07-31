@@ -1,0 +1,348 @@
+.sense-app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-dark);
+  overflow: hidden;
+}
+
+/* Left Login Panel */
+.sense-login-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Center horizontally so it brings the form closer to the middle */
+  padding: 2.5rem 2rem;
+  background-color: var(--bg-dark-panel);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  overflow-y: auto;
+}
+
+.login-content {
+  width: 100%;
+  max-width: 400px;
+  margin: auto 0;
+}
+
+.login-title {
+  font-family: var(--font-cyber);
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-tech);
+  font-size: clamp(0.75rem, 1vw, 0.85rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-text-sub);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-left {
+  position: absolute;
+  left: 1rem;
+  color: var(--color-text-dim);
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-right {
+  position: absolute;
+  right: 1rem;
+  color: var(--color-text-dim);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.input-icon-right:hover {
+  color: var(--color-accent);
+}
+
+.sense-input {
+  width: 100%;
+  height: clamp(44px, 6vh, 52px);
+  background-color: var(--bg-input);
+  border: 1px solid var(--bg-input-border);
+  border-radius: 4px;
+  padding: 0 1rem 0 3rem;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  letter-spacing: 0.05em;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.sense-input::placeholder {
+  color: #334155;
+}
+
+.sense-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 12px rgba(0, 164, 219, 0.25);
+}
+
+/* Submit Button */
+.btn-initialize {
+  width: 100%;
+  height: clamp(44px, 6vh, 52px);
+  margin-top: 0.75rem;
+  background: linear-gradient(90deg, #095995 0%, #00a4db 100%);
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: var(--font-cyber);
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 164, 219, 0.3);
+}
+
+.btn-initialize:hover {
+  background: linear-gradient(90deg, #0c6ab3 0%, #38bdf8 100%);
+  box-shadow: 0 4px 25px rgba(0, 164, 219, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-initialize:active {
+  transform: translateY(0);
+}
+
+/* Restricted Protocol Warning Card */
+.restricted-card {
+  margin-top: 1.5rem;
+  background-color: var(--color-warning-bg);
+  border: 1px solid var(--color-warning-border);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+}
+
+.restricted-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.warning-icon {
+  color: var(--color-warning-title);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.restricted-title {
+  font-family: var(--font-tech);
+  font-size: clamp(0.75rem, 1vw, 0.85rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-warning-title);
+  text-transform: uppercase;
+}
+
+.restricted-desc {
+  font-size: clamp(0.75rem, 0.95vw, 0.825rem);
+  color: var(--color-text-sub);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.login-footer {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-dim);
+  letter-spacing: 0.15em;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+
+/* Right Brand Showcase Panel */
+.sense-brand-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-dark);
+  position: relative;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Reticle Bounding Box around Logo */
+.logo-reticle-box {
+  position: relative;
+  width: clamp(160px, 22vw, 240px);
+  height: clamp(160px, 22vw, 240px);
+  background-color: rgba(11, 19, 36, 0.6);
+  border: 1px solid rgba(0, 164, 219, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(1.5rem, 3vh, 2.5rem);
+  box-shadow: inset 0 0 30px rgba(0, 164, 219, 0.05);
+}
+
+/* Reticle Corner Brackets */
+.reticle-corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--color-accent);
+  border-style: solid;
+}
+
+.top-left {
+  top: -1px;
+  left: -1px;
+  border-width: 2px 0 0 2px;
+}
+
+.top-right {
+  top: -1px;
+  right: -1px;
+  border-width: 2px 2px 0 0;
+}
+
+.bottom-left {
+  bottom: -1px;
+  left: -1px;
+  border-width: 0 0 2px 2px;
+}
+
+.bottom-right {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 2px 2px 0;
+}
+
+.brand-svg-logo {
+  width: clamp(80px, 12vw, 120px);
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(0, 164, 219, 0.4));
+}
+
+/* Large Brand Text */
+.brand-title-group {
+  text-align: center;
+}
+
+.brand-word-assentrim,
+.brand-word-sense {
+  display: block;
+  font-family: var(--font-cyber);
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  line-height: 1.1;
+  background: linear-gradient(180deg, #38bdf8 0%, #0087b7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(0, 164, 219, 0.3);
+}
+
+.brand-word-sense {
+  letter-spacing: 0.38em;
+  margin-left: 0.2em;
+}
+
+/* Responsive Scaling for Low Height Devices (Mobile Landscape / Small Tablets) */
+@media (max-height: 600px) and (orientation: landscape) {
+  .sense-login-panel {
+    padding: 1.5rem 1.5rem;
+  }
+  
+  .login-title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.75rem;
+  }
+
+  .restricted-card {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .restricted-desc {
+    font-size: 0.725rem;
+    line-height: 1.35;
+  }
+
+  .logo-reticle-box {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1rem;
+  }
+
+  .brand-word-assentrim,
+  .brand-word-sense {
+    font-size: 1.75rem;
+  }
+}
+
+/* Responsive layout for Portrait screens (Mobile / Tablet in Vertical orientation) */
+@media (max-width: 768px) and (orientation: portrait) {
+  .sense-app-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .sense-brand-panel {
+    order: -1;
+    padding: 3rem 1.5rem 1.5rem;
+    flex: none;
+  }
+
+  .sense-login-panel {
+    padding: 2rem 1.5rem;
+    border-right: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    flex: none;
+  }
+
+  .logo-reticle-box {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 1.5rem;
+  }
+
+  .brand-word-assentrim,
+  .brand-word-sense {
+    font-size: 2rem;
+  }
+}
