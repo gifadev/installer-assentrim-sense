@@ -23,23 +23,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build Web App
         run: npm run build
 
-      - name: Install Capacitor & Generate Android Project
+      - name: Sync & Build Android APK
         run: |
-          npm install @capacitor/core @capacitor/cli @capacitor/android
-          npx cap init "Assentrim Sense" "com.assentrim.sense" --web-dir dist
-          npx cap add android
+          npx cap add android || true
           npx cap sync android
-
-      - name: Build Android APK with Gradle
-        run: |
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
