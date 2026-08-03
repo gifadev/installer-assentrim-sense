@@ -1,4 +1,4 @@
-package com.assentrim.sense;
+package com.asentrim.sense;
 
 import com.getcapacitor.BridgeActivity;
 

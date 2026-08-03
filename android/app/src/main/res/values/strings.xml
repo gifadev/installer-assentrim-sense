@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Assentrim Sense</string>
-    <string name="title_activity_main">Assentrim Sense</string>
-    <string name="package_name">com.assentrim.sense</string>
-    <string name="custom_url_scheme">com.assentrim.sense</string>
+    <string name="app_name">Asentrim Sense</string>
+    <string name="title_activity_main">Asentrim Sense</string>
+    <string name="package_name">com.asentrim.sense</string>
+    <string name="custom_url_scheme">com.asentrim.sense</string>
 </resources>

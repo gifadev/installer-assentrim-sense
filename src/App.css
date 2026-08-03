@@ -257,7 +257,7 @@
   text-align: center;
 }
 
-.brand-word-assentrim,
+.brand-word-asentrim,
 .brand-word-sense {
   display: block;
   font-family: var(--font-cyber);
@@ -307,7 +307,7 @@
     margin-bottom: 1rem;
   }
 
-  .brand-word-assentrim,
+  .brand-word-asentrim,
   .brand-word-sense {
     font-size: 1.75rem;
   }
@@ -341,7 +341,7 @@
     margin-bottom: 1.5rem;
   }
 
-  .brand-word-assentrim,
+  .brand-word-asentrim,
   .brand-word-sense {
     font-size: 2rem;
   }

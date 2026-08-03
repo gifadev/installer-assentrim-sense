@@ -40,7 +40,7 @@ const SenseLicenseModal: React.FC<SenseLicenseModalProps> = ({ isOpen, onClose, 
     await new Promise(resolve => setTimeout(resolve, 650));
 
     if (licenseKey.trim() === '123') {
-      console.log("Assentrim Sense: License Verification Success");
+      console.log("Asentrim Sense: License Verification Success");
       onSuccess();
       onClose();
     } else {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import SenseLicenseModal from './components/SenseLicenseModal';
 import './App.css';
-import senseLogo from './assets/assentrim-sense-logo.svg';
+import senseLogo from './assets/asentrim-sense-logo.svg';
 
 function App() {
   const [username, setUsername] = useState('');
@@ -23,7 +23,7 @@ function App() {
   };
 
   const handleLicenseSuccess = () => {
-    setNotification("TERMINAL UNLOCKED. Welcome to Assentrim Sense System.");
+    setNotification("TERMINAL UNLOCKED. Welcome to Asentrim Sense System.");
     setTimeout(() => setNotification(null), 5000);
   };
 
@@ -154,7 +154,7 @@ function App() {
 
         {/* Footer */}
         <div className="login-footer">
-          © 2026 - ASSENTRIM SENSE
+          © 2026 - ASENTRIM SENSE
         </div>
       </div>
 
@@ -165,11 +165,11 @@ function App() {
           <div className="reticle-corner top-right"></div>
           <div className="reticle-corner bottom-left"></div>
           <div className="reticle-corner bottom-right"></div>
-          <img src={senseLogo} alt="Assentrim Sense Logo" className="brand-svg-logo" />
+          <img src={senseLogo} alt="Asentrim Sense Logo" className="brand-svg-logo" />
         </div>
 
         <div className="brand-title-group">
-          <span className="brand-word-assentrim">ASSENTRIM</span>
+          <span className="brand-word-asentrim">ASENTRIM</span>
           <span className="brand-word-sense">SENSE</span>
         </div>
       </div>

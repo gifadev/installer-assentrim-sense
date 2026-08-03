@@ -1,4 +1,4 @@
-name: Build Android APK (Assentrim Sense)
+name: Build Android APK (Asentrim Sense)
 
 on:
   workflow_dispatch:
@@ -44,7 +44,7 @@ jobs:
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Assentrim-Sense-Android-APK
+          name: Asentrim-Sense-Android-APK
           path: android/app/build/outputs/apk/debug/app-debug.apk
 
       - name: Create GitHub Release
